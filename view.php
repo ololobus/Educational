@@ -1,14 +1,14 @@
 <?php
 
-$hostname = "127.0.0.1"; 
-$username = "root"; 
-$password = ""; 
+$hostname = "127.0.0.1";
+$username = "root";
+$password = "";
 $dbName = "forumdb";
 $dbTable = "posts_data";
-$link = mysql_pconnect($hostname, $username, $password) 
+$link = mysql_pconnect($hostname, $username, $password)
 	or die (mysql_error());
 
-mysql_select_db ($dbName) 
+mysql_select_db ($dbName)
 	or die (mysql_error());
 
 $query = "SELECT * FROM $dbTable";
@@ -16,10 +16,10 @@ $res = mysql_query($query)
 	or die(mysql_error());
 $num = mysql_num_rows($res);
 
-while ($row=mysql_fetch_array($res)) { 
-    echo $row['post_text']."<br>"; 
+while ($row=mysql_fetch_array($res)) {
+    echo $row['post_text']."<br>";
     echo "<br><b>Написал: </b>" .$row['post_usr'];
-	echo "<br><em><A href='postview.php?id=" .$row['post_id']. "'>Комментарии</A></em>"; 
+	echo "<br><em><A href='postview.php?id=" .$row['post_id']. "'>Комментарии</A></em>";
     echo "<br><br>";
 	echo "<HR NOSHADE WIDTH='100%'>";
 	}

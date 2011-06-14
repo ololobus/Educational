@@ -1,32 +1,23 @@
-<html>
-
-<head>
-<title>Forum</title>
-
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<style type="text/css">
-	A {
-	color: #000000;
-	text-decoration: none;
-	}
-	A:visited {
-	color: #000000;
-	}
-	A:hover {
-	color: #000000; 
-	text-decoration: underline;
-	}
-</style>
-</head>
-
-<body>
-<H1 align="center">Forum</H1>
-
 <?php
-include('view.php');
-view();
+
+require('database.cfg');
+
+$link = mysql_pconnect($hostname, $username, $password);
+mysql_select_db($dbName);
+
+$query = "SELECT * FROM $dbTable";
+$res = mysql_query($query);
+$num = mysql_num_rows($res);
+
+$posts = array();
+while ($row=mysql_fetch_array($res)) {
+  array_push($posts,$row)
+}
+
+mysql_close($link);
+
+require('head.tpl')
+require('index.tpl')
+require('tail.tpl')
+
 ?>
-
-</body>
-
-</html>
