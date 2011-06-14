@@ -1,7 +1,7 @@
 <?php foreach ($posts as $post) { ?>
   <?php $post['post_text'] ?> <br>
   <br><b>написал: </b> <?php $post['post_usr'] ?>
-  <br><em><a href='postview.php?id="<?php $post['post_id'] ?>"'>комментарии</a></em>
+  <br><em><a href='postview.php?id="<?php $post['id'] ?>"'>комментарии</a></em>
   <br><br>
   <hr noshade width='100%'>
 <?php }; ?>

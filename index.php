@@ -11,13 +11,13 @@ $num = mysql_num_rows($res);
 
 $posts = array();
 while ($row=mysql_fetch_array($res)) {
-  array_push($posts,$row)
+  array_push($posts,$row);
 }
 
 mysql_close($link);
 
-require('head.tpl')
-require('index.tpl')
-require('tail.tpl')
+require('head.tpl');
+require('index.tpl');
+require('tail.tpl');
 
 ?>
