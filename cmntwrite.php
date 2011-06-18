@@ -1,11 +1,7 @@
 <?php
 
-$hostname = "127.0.0.1"; 
-$username = "root"; 
-$password = ""; 
-$dbName = "forumdb";
+require('database.cfg');
 $id_post = $_GET['id'];
-$dbTable = "cmnt_$id_post";
 
 $link = mysql_pconnect($hostname, $username, $password) 
 	or die (mysql_error());
@@ -15,7 +11,7 @@ mysql_select_db ($dbName)
 
 $text = $_POST['cmnt_text'];
 $usr = $_POST['cmnt_usr'];
-$query = "insert into $dbTable values('', '$text', '$usr')";
+$query = "insert into $CmntsTable values('', $id_post, '$text', '$usr')";
 mysql_query($query)
 	or die (mysql_error()); 
 

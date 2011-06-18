@@ -5,9 +5,8 @@ require('database.cfg');
 $link = mysql_pconnect($hostname, $username, $password);
 mysql_select_db($dbName);
 
-$query = "SELECT * FROM $dbTable";
+$query = "select * from $PostsTable";
 $res = mysql_query($query);
-$num = mysql_num_rows($res);
 
 $posts = array();
 while ($row=mysql_fetch_array($res)) {
@@ -17,7 +16,7 @@ while ($row=mysql_fetch_array($res)) {
 mysql_close($link);
 
 require('head.tpl');
-require('index.tpl');
+require('body_main.tpl');
 require('tail.tpl');
 
 ?>
