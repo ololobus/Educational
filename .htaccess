@@ -1,0 +1,6 @@
+Options +FollowSymLinks
+RewriteEngine On
+RewriteBase /~stas/educational/
+RewriteRule ^(.*)$ router.php?q=$1 [L,NC,QSA]
+
+
