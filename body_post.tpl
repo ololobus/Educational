@@ -1,14 +1,14 @@
 <?php foreach ($posts as $post) { ?>
-  <?php echo $post['post_text'] ?> <br>
-  <br><b>Написал: </b> <?php echo $post['post_usr'] ?>
-  <br>
-  <hr noshade width='100%'>
-  <br>
+	<pre><?php echo $post['post_text'] ?></pre>
+	<br><b>Написал: </b> <?php echo $post['post_usr'] ?>
+	<br>
+	<hr noshade width='100%'>
+	<br>
 <?php }; ?>
 
 <?php foreach ($cmnts as $cmnt) { ?>
-  <b> <?php echo $cmnt['cmnt_usr']?>: </b> <?php echo $cmnt['cmnt_text'] ?>
-  <br><br>
+	<b> <?php echo $cmnt['cmnt_usr']?>: </b> <pre><?php echo $cmnt['cmnt_text'] ?></pre>
+	<br><br>
 <?php }; ?>
 
 <br><br>

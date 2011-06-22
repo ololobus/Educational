@@ -1,4 +1,4 @@
 Options +FollowSymLinks
 RewriteEngine On
-RewriteBase /~%username%/educational/
-RewriteRule ^(.*)$ router.php?q=$1 [L,NC,QSA]
+RewriteBase /~alexk/educational/
+RewriteRule ^(.*)$ router.php?query=$1 [L,NC,QSA]
