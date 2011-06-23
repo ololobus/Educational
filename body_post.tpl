@@ -2,22 +2,17 @@
 	<pre><?php echo $post['post_text'] ?></pre>
 	<br><b>Написал: </b> <?php echo $post['post_usr'] ?>
 	<br>
-	<hr noshade width='100%'>
+	<hr noshade width='100%' size=1>
 	<br>
 <?php }; ?>
 
 <?php foreach ($cmnts as $cmnt) { ?>
-	<b> <?php echo $cmnt['cmnt_usr']?>: </b> <pre><?php echo $cmnt['cmnt_text'] ?></pre>
-	<br><br>
+	<b> <?php echo $cmnt['cmnt_usr']?>: </b><?php echo $cmnt['cmnt_text'] ?>
+	<br>
+	<hr noshade width='50%' size=1 align=left>	
+	<br>
 <?php }; ?>
 
-<br><br>
-<form action='cmntwrite.php?id=<?php echo $id_post ?>' method=post name='comment'>
-<b><u>Остроумный комментарий</u></b><br><br>
-<b>Имя:</b>
-<input type='text' name='cmnt_usr'><br><br>
-<b>Текст:</b><br>
-<textarea name='cmnt_text' WRAP='physical' cols='50' rows='7'></textarea><br>
-<input type='submit' value='Yarrr!'>
-</form>
-<A href='index.php'><---На глагне</A>
+<a href='answer'>Написать комментарий</a>
+<br>
+<a href='javascript:history.back()'><---Назад</a>
