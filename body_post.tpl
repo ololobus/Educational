@@ -9,7 +9,7 @@
 <?php foreach ($cmnts as $cmnt) { ?>
 	<b> <?php echo $cmnt['cmnt_usr']?>: </b><?php echo $cmnt['cmnt_text'] ?>
 	<br>
-	<hr noshade width='50%' size=1 align=left>	
+	<hr noshade width='30%' size=1 align=left>	
 	<br>
 <?php }; ?>
 

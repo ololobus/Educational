@@ -98,7 +98,6 @@ class Posts {
 			or die (mysql_error()); 
 		
 		mysql_close($link);
-		
 		echo "Пост удален";
 	}
 }
