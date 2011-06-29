@@ -1,0 +1,4 @@
+Options +FollowSymLinks
+RewriteEngine On
+RewriteBase /~alexk/educational/forum/
+RewriteRule ^(.*)$ router.php?query=$1 [L,NC,QSA]
