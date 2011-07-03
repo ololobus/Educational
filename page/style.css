@@ -42,10 +42,10 @@ a, a:visited, a:hover {
   width: 285px;
 }
 .eventtext {
-  padding-right: 20px;
+  padding-right: 10px;
   padding-top: 10px;
   padding-left: 10px;
-  width: 190px;
+  width: 185px;
   float: right;
   text-align: left;
   font-family: "Calibri";
@@ -58,7 +58,7 @@ a, a:visited, a:hover {
   width: 55px;
 	color: rgb(16,196,255);
 	float: left;
-	margin-left: 10px;
+	margin-left: 20px;
 }
 .day {
   font-size: 40pt;
@@ -83,6 +83,7 @@ a, a:visited, a:hover {
   width: 290px;
   float: left;
   left: 75px;
+  text-shadow: black 1px 1px 2px, white 0 0 1px;;
 }
 .title {
 	color: rgb(255,255,255);
@@ -108,7 +109,7 @@ a, a:visited, a:hover {
   clear: left;
   margin-bottom: 30px;
   position: relative;
-  bottom: 10px;
+  bottom: 2px;
   right: 40px;
 }
 #nav ul {
@@ -130,6 +131,7 @@ a, a:visited, a:hover {
   float: left;
   position: relative;
   left: 50px;
+  box-shadow: 0 0 15px rgb(30,30,30);
 }
 .leftimg {
   border:solid 10px white;
@@ -139,6 +141,7 @@ a, a:visited, a:hover {
   position: relative;
   top: 25px;
   left: 67px;
+  box-shadow: 0 0 15px rgb(30,30,30);
 }
 .rightimg {
   border:solid 10px white;
@@ -147,21 +150,23 @@ a, a:visited, a:hover {
   position: relative;
   top: 25px;
   left: 50px;
+  box-shadow: 5px 5px 10px rgba(30,30,30,0.5);
 }
 
 #search {
   float: right;
-  width: 180px;
+  width: 200px;
   height: 26px;
   position: relative;
-  right: 75px;
+  right: 61px;
   top: 20px;
 }
 #search input {
   height: 26px;
   font-family: "Calibri";
   font-size: 12pt;
-  color: rgb(100,100,100);
+  color: rgb(130,130,130);
+  padding-left: 9px;
 }
 .searchinput {
   position: relative;
@@ -172,18 +177,19 @@ a, a:visited, a:hover {
 #line1 {
   background-color: rgb(240,240,240);
   width: 1000px;
-  height: 500px;
+  height: 470px;
   margin:0 auto;
 }
 .line1title {
   color: rgb(117,117,117);
 	font-family: "TerminalDosis-Light";
 	font-size: 30pt;
-	text-align: center;
+	text-align: left;
 }
 .line1img {
   border:solid 7px white;
   margin-bottom: 15px;
+  box-shadow: 0 0 5px rgba(150,150,150,0.5);
 }
 .line1text {
   text-align: left;
@@ -198,34 +204,47 @@ a, a:visited, a:hover {
   left: 67px;
   top: 40px;
   width: 285px;
-  height: 350px;
+  height: 340px;
 }
 #about {
   clear: right;
-  border-right: solid 1px rgb(230,230,230);
+  border-right: solid 1px rgb(220,220,220);
+  width: 305px;
+}
+#about .line1title {
+  padding-left: 7px;
 }
 #exp {
-  border-right: solid 1px rgb(230,230,230);
+  border-right: solid 1px rgb(220,220,220);
   border-left: solid 1px rgb(250,250,250);
+  width: 265px;
 }
 #exp .bluebutton {
-  margin-left: 50px;
+  margin-left: 35px;
 }
 #exp .line1text {
   margin-top: 13px;
+}
+#exp .line1title {
+  padding-left: 25px;
+}
+#exp ul {
+  list-style-image: url('img/listmarker2.png');
+  padding-left: 35px;
+}
+#exp li {
+  padding-top: 15px;
 }
 #new {
   border-left: solid 1px rgb(250,250,250);
 }
 #new .bluebutton {
-  margin-left: 75px;
+  margin-left: 89px;
+  margin-top: 25px;
 }
-#exp ul {
-  list-style-image: url('img/listmarker2.png');
-  padding-left: 50px;
-}
-#exp li {
-  padding-top: 15px;
+#new .line1title  {
+  text-align: left;
+  padding-left: 20px;
 }
 .line1subtitle {
   font-family: "Calibri";
@@ -238,7 +257,7 @@ a, a:visited, a:hover {
 #line2 {
   background-color: rgb(65,65,65);
   width: 1000px;
-  height: 450px;
+  height: 420px;
   margin:0 auto;
 }
 .line2title {
@@ -250,8 +269,9 @@ a, a:visited, a:hover {
 }
 .line2img {
   border:solid 7px white;
-  margin-bottom: 15px;
-  margin-right: 15px;
+  margin-bottom: 16px;
+  margin-right: 17px;
+  box-shadow: 0 0 7px rgba(50,50,50,0.5);
 }
 .line2text {
   text-align: left;
@@ -259,30 +279,32 @@ a, a:visited, a:hover {
   font-size: 12pt;
   color: rgb(234,234,234);
   padding-right: 20px;
-  padding-left: 15px;
   height: 222px;
 }
 #philo, #soon {
-  height: 350px;
+  height: 330px;
   float: left;
   position: relative;
   left: 67px;
+  margin-top: 40px;
 }
 #philo {
   width: 570px;
+  border-right: solid 1px rgb(50,50,50);
 }
-#philo .bluebutton {
-  margin-left: 15px;
+#philo .line2title {
+  padding-left: 7px;
 }
 #soon {
   width: 285px;
+  border-left: solid 1px rgb(76,76,76);
 }
 #soon .line2title {
-  text-align: center;
-  padding-left: 0;
+  padding-left: 20px;
 }
 #soon .bluebutton {
-  margin-left: 75px;
+  margin-left: 89px;
+  margin-top: 18px;
 }
 #soon .eventtext {
   color: rgb(234,234,234);
