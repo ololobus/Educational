@@ -9,39 +9,39 @@ body {
 }
 
 #photos {
-  width: 1280px;
+  position: relative;
+  width: 1000px;
   margin:0 auto;
 }
 
 #img1, #img2, #img3 {
-  position: relative;
+  position: absolute;
   border:solid 10px white;
-  width: 400px;
-  height: 300px;
+  width: 400px auto;
 }
 
 #img1 {
-  right: 10px;
-  top: 0px;
-  box-shadow: 0 0 15px rgba(30,30,30,0.5);  
+  box-shadow: 0 0 15px rgba(30,30,30,0.5);
+  left: 0px;
 }
 #img2 {
-  right: 0px;
-  top: 0px;
   box-shadow: 0 0 15px rgba(30,30,30,0.5);
+  left: 180px;
 }
 #img3 {
-  right: 640px;
-  top: 0px;
   box-shadow: 0 0 15px rgba(30,30,30,0.5);
+  left: 430px;
 }
 
-.center {
-  z-index: 2;
-}
 .left {
   z-index: 1;
+  height: 250px;
+}
+.center {
+  z-index: 3;
+  height: 300px;
 }
 .right {
-  z-index: 1;
+  z-index: 2;
+  height: 250px;
 }
