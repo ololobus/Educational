@@ -81,7 +81,7 @@ Carousel = {
         var progress = now / Carousel.duration
         var l_position = l_from + Math.abs(l_to - l_from) * deltaPos(progress)
         var r_position = r_from - Math.abs(r_to - r_from) * deltaPos(progress)
-        var c_position = c_from + Math.abs(c_to - c_from) * deltaPos(progress)
+        var c_position = c_from + Math.abs(c_to - c_from) * (1 - deltaPos(progress - 1))
         var l_height = l_size_from + Math.abs(l_size_to - l_size_from) * deltaSize(progress)
         var c_height = c_size_from - Math.abs(c_size_to - c_size_from) * deltaSize(progress)
         var l_top = l_top_from - Math.abs(l_top_to - l_top_from) * deltaSize(progress)
@@ -166,7 +166,7 @@ Carousel = {
         var progress = now / Carousel.duration
         var r_position = r_from - Math.abs(r_to - r_from) * deltaPos(progress)
         var l_position = l_from + Math.abs(l_to - l_from) * deltaPos(progress)
-        var c_position = c_from - Math.abs(c_to - c_from) * deltaPos(progress)
+        var c_position = c_from - Math.abs(c_to - c_from) * (1 - deltaPos(progress - 1))
         var r_height = r_size_from + Math.abs(r_size_to - r_size_from) * deltaSize(progress)
         var c_height = c_size_from - Math.abs(c_size_to - c_size_from) * deltaSize(progress)
         var r_top = r_top_from - Math.abs(r_top_to - r_top_from) * deltaSize(progress)
@@ -185,7 +185,7 @@ Carousel = {
           c_img.style.zIndex = '2'
         }
         if (progress < 1)
-            setTimeout(arguments.callee, Carousel.delay());
+            setTimeout(arguments.callee, 0);
     }, Carousel.delay());
     
     for (var i = 0; i < Carousel.imgsArray.length; i++ ) {
